@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %> </title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<nav>
+  <h1><a href="/">Fruit smoothies</a></h1>
+  <ul>
+    <!-- if it is the user or if the user is logged in, show Welcome &, or logout at the top -->
+    <% if (user) { %>
+      <li>Welcome, <%= user.email %> </li>
+      <li><a href="/logout">Log out</a></li>
+    <% } else { %>
+      <!-- else show login or signup -->
+      <li><a href="/login">Log in</a></li>
+      <li><a href="/signup" class="btn">Sign up</a></li>
+    <% } %>
+
+  </ul>
+</nav>
+</html>
